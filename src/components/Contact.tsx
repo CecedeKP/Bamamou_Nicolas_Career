@@ -133,7 +133,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Location</h4>
-                    <p className="text-muted-foreground">San Francisco, CA 94107</p>
+                    <p className="text-muted-foreground">Beijing Daxing Yizhuang Economic development Zone</p>
                   </div>
                 </div>
                 
@@ -143,7 +143,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-muted-foreground">contact@johndoe.com</p>
+                    <p className="text-muted-foreground">bamamounicolas@gmail.com</p>
                   </div>
                 </div>
                 
@@ -153,7 +153,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+86 (188) 107-991-28</p>
                   </div>
                 </div>
                 

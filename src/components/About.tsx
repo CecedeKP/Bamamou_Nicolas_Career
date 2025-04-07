@@ -45,7 +45,7 @@ const About = () => {
                   <Calendar className="text-primary min-w-5" size={20} />
                   <div>
                     <p className="font-medium">Date of Birth</p>
-                    <p className="text-muted-foreground">January 15, 1985</p>
+                    <p className="text-muted-foreground">April 15, 1994</p>
                   </div>
                 </div>
                 
@@ -53,7 +53,7 @@ const About = () => {
                   <MapPin className="text-primary min-w-5" size={20} />
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Beijing Daxing Yizhuang Economic Develipment Zone</p>
                   </div>
                 </div>
                 
@@ -61,7 +61,7 @@ const About = () => {
                   <Mail className="text-primary min-w-5" size={20} />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">contact@johndoe.com</p>
+                    <p className="text-muted-foreground">bamamounicolas@gmail.com</p>
                   </div>
                 </div>
               </div>

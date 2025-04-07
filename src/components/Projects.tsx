@@ -4,6 +4,7 @@ import { ExternalLink, Code, Battery, Cpu, Zap, Globe } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import ElectricVehicle from "@/assets/images/Engineering EBike.jpg";
 
 const Projects = () => {
   const categories = [
@@ -21,7 +22,7 @@ const Projects = () => {
       id: 1,
       title: 'Advanced PCB Design for IoT Sensors',
       category: 'electrical',
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600',
+      image: '',
       description: 'Multi-layer PCB designed for low-power IoT environmental sensors with integrated wireless communication.',
       tags: ['PCB Design', 'IoT', 'Low Power'],
       icon: <Zap className="h-6 w-6" />,
@@ -69,6 +70,15 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600',
       description: 'Responsive personal portfolio website showcasing engineering projects and technical skills.',
       tags: ['React', 'Tailwind CSS', 'Responsive'],
+      icon: <Globe className="h-6 w-6" />,
+    },
+    {
+      id: 7,
+      title: 'Electric vehicle System Integration',
+      category: 'electrical',
+      image: ElectricVehicle,
+      description: 'Integrated electrical systems for an electric bike, including motor control and battery management.',
+      tags: ['MCU', 'ECU/VCU', 'OBC', 'DC-DC', 'Battery'],
       icon: <Globe className="h-6 w-6" />,
     },
   ];
