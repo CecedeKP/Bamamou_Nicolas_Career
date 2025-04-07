@@ -1,5 +1,6 @@
 
 import { ArrowDown } from "lucide-react";
+import profileImage from "@/assets/images/nicolasbamamou.jpg";
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
         <div className="flex-1 animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             <span className="block">Hello, I'm</span>
-            <span className="text-primary">John Doe</span>
+            <span className="text-primary">Nicolas Bamamou</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
             Engineer | Innovator | Creator
@@ -34,11 +35,11 @@ const Hero = () => {
             <div className="w-72 h-72 md:w-80 md:h-80 bg-primary/10 rounded-full absolute -top-6 -left-6"></div>
             <div className="w-72 h-72 md:w-80 md:h-80 bg-accent/10 rounded-full absolute -bottom-6 -right-6"></div>
             <div className="w-72 h-72 md:w-80 md:h-80 bg-white relative rounded-full overflow-hidden border-4 border-white shadow-lg">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400&h=400" 
-                alt="Professional Headshot" 
-                className="w-full h-full object-cover"
-              />
+            <img 
+              src="/images/bamamou.jpg" 
+              alt="Professional Headshot" 
+              className="w-full h-full object-cover"
+            />  
             </div>
           </div>
         </div>
