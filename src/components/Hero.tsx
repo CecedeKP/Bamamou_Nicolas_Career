@@ -1,6 +1,6 @@
 
 import { ArrowDown } from "lucide-react";
-import profileImage from "@/assets/images/nicolasbamamou.jpg";
+import profileImage from "@/assets/images/bamamou.jpg";
 
 const Hero = () => {
   return (
@@ -36,9 +36,9 @@ const Hero = () => {
             <div className="w-72 h-72 md:w-80 md:h-80 bg-accent/10 rounded-full absolute -bottom-6 -right-6"></div>
             <div className="w-72 h-72 md:w-80 md:h-80 bg-white relative rounded-full overflow-hidden border-4 border-white shadow-lg">
             <img 
-              src="/images/bamamou.jpg" 
-              alt="Professional Headshot" 
-              className="w-full h-full object-cover"
+             src={profileImage} 
+             alt="Professional Headshot" 
+             className="w-full h-full object-cover"
             />  
             </div>
           </div>

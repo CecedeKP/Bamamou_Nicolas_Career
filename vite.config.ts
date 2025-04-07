@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/Bamamou_Nicolas_Career/', // Add this line - must match your repository name
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
