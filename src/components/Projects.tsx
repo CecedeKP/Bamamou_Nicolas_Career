@@ -77,7 +77,7 @@ const Projects = () => {
       title: 'Electric vehicle System Integration',
       category: 'electrical',
       image: ElectricVehicle,
-      description: 'Integrated electrical systems for an electric bike, including motor control and battery management.',
+      description: 'Integrated electrical systems for High Speed electric Motorcycles, including ECU,  motor controller and battery management sytem, OBC, DC-DC.',
       tags: ['MCU', 'ECU/VCU', 'OBC', 'DC-DC', 'Battery'],
       icon: <Globe className="h-6 w-6" />,
     },

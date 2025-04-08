@@ -1,5 +1,5 @@
 
-import { Download, Calendar, MapPin, Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Download, Calendar, MapPin, Mail, Linkedin, Github, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -12,21 +12,25 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-6">
             <p className="text-lg">
-              With over 10 years of experience in engineering, I've built my career on solving complex 
-              problems at the intersection of hardware and software. My journey began in electrical engineering, 
-              where I developed a strong foundation in circuit design and analysis, before expanding my expertise 
-              to battery systems, embedded programming, and web development.
+              As a Senior Battery Engineer at Evoke Motorcycles (Beijing), 
+              I bring a multidisciplinary expertise rooted in advanced academic training—a Master’s in Electrical Engineering from Beijing Jiaotong University and a Bachelor’s in Industrial Engineering from Gamal Abdel Nasser University.
+              Specializing in HV lithium-ion battery systems integration, I merge research with practical innovation to develop solutions for EVs, grid storage, and renewable energy. 
+              My work bridges theory and scalability, ensuring reliability across stationary and mobile platforms.
+            </p>
+            <p className="text-lg">
+              With 4+ years of experience, I resolve hardware-software-firmware challenges through advanced battery design (BMS algorithms, thermal management, fast-charging), CAD tools (Fusion 360, Catia V5), PCB development (Altium, KiCad), and programming (C/C++, Python). 
+              Starting in industrial engineering, I optimized equipment reliability via MTBF/MTTR strategies before transitioning to electrical engineering, where I mastered circuit design, microgrids, and energy storage (ESS/BESS). 
+              My expertise now spans embedded programming and web development, enabling end-to-end energy solutions.
             </p>
             
             <p className="text-lg">
-              I thrive on challenging projects that require cross-disciplinary thinking. Whether I'm designing 
-              a battery management system for electric vehicles, developing firmware for IoT devices, or creating 
-              responsive web interfaces, I bring the same attention to detail and passion for excellence.
+              I thrive in multicultural teams, leveraging fluency in French, English, Chinese, and Spanish to deliver global projects like Tarform’s 10.5kW battery pack, BYAHE’s 240kW electric bus system, and ROAM’s mass-transit design. 
+              My focus on innovation, safety, and sustainability drives meticulous attention to detail—whether designing high-voltage EV systems, IoT firmware, or responsive web interfaces.
             </p>
             
             <p className="text-lg">
-              My engineering philosophy centers on creating sustainable, scalable solutions that stand the test of time. 
-              I believe in continuous learning and regularly expand my skillset to embrace emerging technologies.
+              Committed to sustainable technology, I prioritize continuous learning to stay ahead of industry trends. 
+              Explore my portfolio for insights into advancing clean energy and collaborative engineering.
             </p>
             
             <div className="pt-4">
@@ -67,21 +71,24 @@ const About = () => {
               </div>
               
               <div className="mt-6 pt-6 border-t flex items-center justify-between">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/bamamounicolas" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="text-muted-foreground hover:text-primary transition-colors" />
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/Bamamou" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="text-muted-foreground hover:text-primary transition-colors" />
                 </a>
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <Twitter className="text-muted-foreground hover:text-primary transition-colors" />
                 </a>
+                <a href="https://www.youtube.com/@nicolasbamamou94" className="hover:text-accent transition-colors" aria-label="YouTube">
+                <Youtube size={20} />
+              </a>
               </div>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white p-5 rounded-lg shadow-md text-center card-hover">
-                <h4 className="text-4xl font-bold text-primary mb-1">10+</h4>
+                <h4 className="text-4xl font-bold text-primary mb-1">4+</h4>
                 <p className="text-sm font-medium">Years Experience</p>
               </div>
               
