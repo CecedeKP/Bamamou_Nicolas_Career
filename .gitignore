@@ -27,3 +27,8 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+#for the env
+# ...existing code...
+.env
+.env*.local
