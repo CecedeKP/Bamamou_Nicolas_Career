@@ -92,7 +92,10 @@ const Skills = () => {
         "Sheet Metal Design",
         "Manufacturing Processes",
         "Tolerance Analysis",
+        "Metric & Imperial Standards",
+        "Geometric Dimensioning & Tolerancing (GD&T)",
         "Mechanical Assembly & Prototyping", 
+
       ]
     },
     {
@@ -112,7 +115,7 @@ const Skills = () => {
   const softSkills = [
     {
       category: "Leadership & Management",
-     
+      url: "/communication", // Here I should add a link to my blogging skills
       items: [
         "Project Leadership",
         "Team Management",
