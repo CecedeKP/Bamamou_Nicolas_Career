@@ -1,6 +1,6 @@
 import { Github, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { FaWhatsapp, FaWeixin } from 'react-icons/fa';
-import { WeChatModal } from '@/components/ui/Wechat-modal';
+import { WeChatModal } from '@/components/ui/wechatmodal';
 import { useState } from 'react';
 
 const Footer = () => {

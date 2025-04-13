@@ -3,7 +3,7 @@ import { FaWhatsapp, FaWeixin } from 'react-icons/fa';
 import { Button } from "@/components/ui/button";
 import CV from '@/assets/documents/Nicolas_Bamamou_CV_012025.pdf';
 import { useState } from 'react';
-import { WeChatModal } from '@/components/ui/Wechat-modal';
+import { WeChatModal } from '@/components/ui/wechatmodal';
 
 const About = () => {
   const [isWeChatModalOpen, setIsWeChatModalOpen] = useState(false);
