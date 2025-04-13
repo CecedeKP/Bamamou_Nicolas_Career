@@ -1,6 +1,5 @@
-import * as React from "react"
 import { X } from "lucide-react"
-import WeChatQR from "@/assets/images/wechat-qr.png"
+import WeChatQR from "@/assets/images/wechat-qr.jpg"
 
 interface WeChatModalProps {
   isOpen: boolean
