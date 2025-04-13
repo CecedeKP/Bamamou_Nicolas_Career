@@ -1,7 +1,7 @@
-
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import CV from '@/assets/documents/Nicolas_Bamamou_CV_012025.pdf';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,6 +29,15 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'Nicolas_Bamamou_CV_012025.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -51,7 +60,12 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button variant="default" className="bg-accent hover:bg-accent/90">
+          <Button 
+            variant="default" 
+            className="bg-accent hover:bg-accent/90"
+            onClick={handleDownload}
+          >
+            <Download className="h-4 w-4 mr-2" />
             Download CV
           </Button>
         </div>
@@ -79,7 +93,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="default" className="bg-accent hover:bg-accent/90 w-full">
+            <Button 
+              variant="default" 
+              className="bg-accent hover:bg-accent/90 w-full"
+              onClick={handleDownload}
+            >
+              <Download className="h-4 w-4 mr-2" />
               Download CV
             </Button>
           </div>

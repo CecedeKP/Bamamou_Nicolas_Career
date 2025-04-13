@@ -1,8 +1,22 @@
-
 import { Download, Calendar, MapPin, Mail, Linkedin, Github, Twitter, Youtube } from "lucide-react";
+import { FaWhatsapp, FaWeixin } from 'react-icons/fa';
 import { Button } from "@/components/ui/button";
+import CV from '@/assets/documents/Nicolas_Bamamou_CV_012025.pdf';
+import { useState } from 'react';
+import { WeChatModal } from '@/components/ui/Wechat-modal';
 
 const About = () => {
+  const [isWeChatModalOpen, setIsWeChatModalOpen] = useState(false);
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = CV;
+    link.download = 'Nicolas_Bamamou_CV_012025.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="section-padding bg-secondary/50">
       <div className="container mx-auto px-4">
@@ -34,8 +48,12 @@ const About = () => {
             </p>
             
             <div className="pt-4">
-              <Button className="bg-primary hover:bg-primary/90 flex items-center gap-2">
-                <Download size={18} /> Download Resume
+              <Button 
+                className="bg-primary hover:bg-primary/90 flex items-center gap-2"
+                onClick={handleDownload}
+              >
+                <Download size={18} /> 
+                Download Resume
               </Button>
             </div>
           </div>
@@ -81,8 +99,15 @@ const About = () => {
                   <Twitter className="text-muted-foreground hover:text-primary transition-colors" />
                 </a>
                 <a href="https://www.youtube.com/@nicolasbamamou94" className="hover:text-accent transition-colors" aria-label="YouTube">
-                <Youtube size={20} />
-              </a>
+                  <Youtube size={20} />
+                </a>
+                <a 
+                href="https://wa.me/8618810799128" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors" aria-label="WhatsApp">
+                  <FaWhatsapp size={20} />
+                </a> 
+                <a  href="#"  onClick={(e) => {e.preventDefault();setIsWeChatModalOpen(true);}} className="hover:text-accent transition-colors" aria-label="WeChat">
+                  <FaWeixin size={20} />
+                </a>
               </div>
             </div>
             
@@ -110,6 +135,10 @@ const About = () => {
           </div>
         </div>
       </div>
+      <WeChatModal 
+        isOpen={isWeChatModalOpen} 
+        onClose={() => setIsWeChatModalOpen(false)} 
+      />
     </section>
   );
 };

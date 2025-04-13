@@ -4,10 +4,11 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Bamamou_Nicolas_Career/', // Add this line - must match your repository name
+  base: '/Bamamou_Nicolas_Career/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
+  assetsInclude: ['**/*.pdf']
 })
