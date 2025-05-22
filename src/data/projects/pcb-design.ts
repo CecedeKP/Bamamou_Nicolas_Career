@@ -6,6 +6,11 @@ export const pcbDesign: Project = {
   title: 'Advanced PCB Design for IoT Sensors',
   category: 'electrical',
   image: './images/PCB design/ESP32-CAN.png',
+  images: [
+    '../images/PCB design/ESP32-CAN.png',
+    '../images/PCB design/ESP32-CAN2.png',
+    '../images/PCB design/ESP32-CAN3.png'
+  ],
   description: 'Multi-layer PCB designed for low-power IoT environmental sensors with integrated wireless communication.',
   fullDescription: 'This project involved the development of a sophisticated multi-layer PCB for IoT environmental sensors. The design focused on achieving ultra-low power consumption while maintaining reliable wireless communication capabilities. The PCB incorporated various environmental sensors and was optimized for mass production.',
   tags: ['PCB Design', 'IoT', 'Low Power'],

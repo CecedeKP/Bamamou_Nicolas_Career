@@ -4,8 +4,13 @@ import type { Project } from './types';
 export const energyStorage: Project = {
   id: 4,
   title: 'Smart Home Energy Storage',
-  category: 'battery',
-  image: './images/BESS/bess-overview.png',
+  category: 'battery',  image: './images/BESS/bess-overview.jpg',
+  images: [
+    './images/BESS/bess-overview.jpg',
+    './images/BESS/bess-installation.jpg',
+    './images/BESS/bess-monitoring.jpg',
+    './images/BESS/bess-performance.jpg'
+  ],
   description: 'Residential battery system designed for optimal energy management with solar integration.',
   fullDescription: 'Developed an innovative residential energy storage solution that seamlessly integrates with solar power systems. The project focused on maximizing energy efficiency and providing reliable backup power while maintaining user-friendly operation.',
   tags: ['Energy Storage', 'Renewable Energy', 'Smart Home'],

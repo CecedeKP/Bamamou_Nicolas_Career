@@ -2,7 +2,14 @@ import { useParams } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { projectsData } from '@/data/projects';
-import { CalendarDays, Clock, Target, User, CheckSquare } from 'lucide-react';
+import { CalendarDays, Clock, Target, User, CheckSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -23,15 +30,24 @@ const ProjectDetail = () => {
               <Badge key={index} variant="secondary">{tag}</Badge>
             ))}
           </div>
-        </div>
-
-        {/* Project Image */}
-        <div className="mb-8 rounded-lg overflow-hidden">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-[400px] object-cover"
-          />
+        </div>        {/* Project Images Carousel */}
+        <div className="mb-8">
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              {(project.images || [project.image]).map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="rounded-lg overflow-hidden">                    <img
+                      src={image}
+                      alt={`${project.title} - Image ${index + 1}`}
+                      className="w-full h-[500px] object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* Project Details */}
