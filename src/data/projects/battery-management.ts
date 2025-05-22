@@ -6,10 +6,10 @@ export const batteryManagement: Project = {
   title: 'Electric Vehicle Battery Management System',
   category: 'battery',  image: './images/BMS/BMS.jpg',
   images: [
-    './images/BMS/BMS.jpg',
-    './images/BMS/BMS.jpg',
-    './images/BMS/BMS.jpg',
-    './images/BMS/BMS.jpg'
+    '../images/BMS/BMS.jpg',
+    '../images/BMS/BMS2.jpg',
+    '../images/BMS/BMS3.jpg',
+    '../images/BMS/BMS1.jpg'
   ],
   description: 'Designed and implemented a sophisticated BMS for electric vehicles, focusing on safety and efficiency.',
   fullDescription: 'Development of a comprehensive Battery Management System (BMS) for electric vehicles, with a focus on maximizing battery life while ensuring safety and reliability. The system includes real-time monitoring, cell balancing, and advanced protection features.',
