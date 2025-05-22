@@ -1,10 +1,10 @@
-
 import { useState } from 'react';
-import { ExternalLink, Code, Battery, Cpu, Zap, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ExternalLink, Code } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import ElectricVehicle from "@/assets/images/Engineering EBike.jpg";
+import { projectsData } from '@/data/projects';
 
 const Projects = () => {
   const categories = [
@@ -16,77 +16,15 @@ const Projects = () => {
   ];
 
   const [activeCategory, setActiveCategory] = useState('all');
+  
+  const projects = projectsData.map(project => ({
+    ...project,
+    icon: project.icon ? <project.icon className="h-6 w-6" /> : null,
+  }));
 
-  const projects = [
-    {
-      id: 1,
-      title: 'Advanced PCB Design for IoT Sensors',
-      category: 'electrical',
-      image: '',
-      description: 'Multi-layer PCB designed for low-power IoT environmental sensors with integrated wireless communication.',
-      tags: ['PCB Design', 'IoT', 'Low Power'],
-      icon: <Zap className="h-6 w-6" />,
-    },
-    {
-      id: 2,
-      title: 'Electric Vehicle Battery Management System',
-      category: 'battery',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600',
-      description: 'Designed and implemented a sophisticated BMS for electric vehicles, focusing on safety and efficiency.',
-      tags: ['BMS', 'EV', 'SolidWorks'],
-      icon: <Battery className="h-6 w-6" />,
-    },
-    {
-      id: 3,
-      title: 'Smart Home Energy Storage',
-      category: 'battery',
-      image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600',
-      description: 'Residential battery system designed for optimal energy management with solar integration.',
-      tags: ['Energy Storage', 'Renewable Energy'],
-      icon: <Battery className="h-6 w-6" />,
-    },
-    {
-      id: 4,
-      title: 'Real-time Data Processing Firmware',
-      category: 'embedded',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=600',
-      description: 'Firmware for STM32 microcontrollers enabling real-time processing of sensor data for industrial applications.',
-      tags: ['STM32', 'Firmware', 'Sensors'],
-      icon: <Cpu className="h-6 w-6" />,
-    },
-    {
-      id: 5,
-      title: 'Wireless Mesh Network for Industrial Monitoring',
-      category: 'embedded',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=600',
-      description: 'Developed a robust mesh network for monitoring industrial equipment in harsh environments.',
-      tags: ['IoT', 'Mesh Network', 'ESP32'],
-      icon: <Cpu className="h-6 w-6" />,
-    },
-    {
-      id: 6,
-      title: 'Engineering Portfolio Website',
-      category: 'web',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600',
-      description: 'Responsive personal portfolio website showcasing engineering projects and technical skills.',
-      tags: ['React', 'Tailwind CSS', 'Responsive'],
-      icon: <Globe className="h-6 w-6" />,
-    },
-    {
-      id: 7,
-      title: 'Electric vehicle System Integration',
-      category: 'electrical',
-      image: ElectricVehicle,
-      description: 'Integrated electrical systems for High Speed electric Motorcycles, including ECU,  motor controller and battery management sytem, OBC, DC-DC.',
-      tags: ['MCU', 'ECU/VCU', 'OBC', 'DC-DC', 'Battery'],
-      icon: <Globe className="h-6 w-6" />,
-    },
-  ];
-
-  const filteredProjects = 
-    activeCategory === 'all' 
-      ? projects 
-      : projects.filter(project => project.category === activeCategory);
+  const filteredProjects = activeCategory === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === activeCategory);
 
   return (
     <section id="projects" className="section-padding">
@@ -108,9 +46,8 @@ const Projects = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <Card key={project.id} className="overflow-hidden card-hover">
-              <div className="relative h-48 overflow-hidden">
+          {filteredProjects.map((project) => (            <Card key={project.id} className="overflow-hidden card-hover">
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -135,9 +72,11 @@ const Projects = () => {
               </CardContent>
               
               <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm">
-                  <ExternalLink className="h-4 w-4 mr-2" /> View Details
-                </Button>
+                <Link to={`/project/${project.id}`}>
+                  <Button variant="outline" size="sm">
+                    <ExternalLink className="h-4 w-4 mr-2" /> View Details
+                  </Button>
+                </Link>
                 {project.category === 'embedded' || project.category === 'web' ? (
                   <Button variant="outline" size="sm">
                     <Code className="h-4 w-4 mr-2" /> View Code
