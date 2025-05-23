@@ -3,29 +3,36 @@ import type { Project } from './types';
 
 export const pcbDesign: Project = {
   id: 1,
-  title: 'Advanced PCB Design for IoT Sensors',
+  title: 'Advanced PCB Design for ECU or VCU',
   category: 'electrical',
   image: './images/PCB design/ESP32-CAN.png',
   images: [
     '../images/PCB design/ESP32-CAN.png',
     '../images/PCB design/ESP32-CAN2.png',
-    '../images/PCB design/ESP32-CAN3.png'
+    '../images/PCB design/ESP32-CAN3.png',
+    '../images/PCB design/ECU.jpg',
   ],
-  description: 'Multi-layer PCB designed for low-power IoT environmental sensors with integrated wireless communication.',
-  fullDescription: 'This project involved the development of a sophisticated multi-layer PCB for IoT environmental sensors. The design focused on achieving ultra-low power consumption while maintaining reliable wireless communication capabilities. The PCB incorporated various environmental sensors and was optimized for mass production.',
+  description: 'Multi-layer PCB designed for Electric vehicle ECU or VCU abiding by automotive standard with integrated bus, serial, and wireless communication.',
+  // description: 'Multi-layer PCB designed for low-power vehicle control unit (VCU) using an ESP32-WROOM-32D module. The design focuses on achieving ultra-low power consumption while maintaining reliable wireless communication capabilities.',
+  fullDescription:'Multi-layer PCB designed for low-power vehicle control unit (VCU) using an ESP32-WROOM-32D module. The design focuses on achieving ultra-low power consumption while maintaining reliable wireless communication capabilities. The PCB incorporates various bus communication chips such the MCP2515-TJA1050 for CAN bus, MCP23017 for I2C bus, and serial communication using both the HSPI and VSPI of the module .',
   tags: ['PCB Design', 'ECU','Low Power','KiCAD','ESP32', 'RTOS', 'I2C', 'CAN Bus', 'SPI', 'ADC', 'UART', 'BLE', 'WiFi'],
   icon: Zap,
   startDate: 'March 2023',
   duration: '3 months',
   scope: 'Full PCB Design, Prototyping, and Firmware Development',
-  technologies: ['KiCAD', 'Altium Designer', 'Embedded C', 'FreeRTOS'],
-  teamSize: 4,
+  technologies: ['KiCAD', 'Version Control', 'Embedded C', 'FreeRTOS', 'Interactive Html BOM'],
   role: 'Lead PCB Designer',
   responsibilities: [
-    'Designed multi-layer PCB using Altium Designer',
+    'Designed multi-layer PCB using KiCAD',
+    'Integrated ESP32-WROOM-32D module for low-power operation',
     'Implemented power management system for extended battery life',
     'Conducted EMC/EMI analysis and optimization',
-    'Coordinated with manufacturers for prototype production'
+    'Coordinated with manufacturers for prototype production',
+    'Developed firmware for communication protocols (I2C, SPI, CAN)',
+    'Created interactive HTML BOM for easy component sourcing',
+    'Conducted testing and validation of PCB design',
+    'Documented design process and created user manuals',
+    'Collaborated with cross-functional teams for system integration'
   ],
   outcomes: [
     'Achieved 60% reduction in power consumption',

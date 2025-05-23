@@ -1,20 +1,19 @@
 import { Globe } from 'lucide-react';
-import ElectricVehicle from "@/assets/images/Engineering EBike.jpg";
 import type { Project } from './types';
 
 export const systemIntegration: Project = {
   id: 3,
   title: 'Electric vehicle System Integration',
-  category: 'electrical',  image: ElectricVehicle,
+  category: 'electrical',  image: './images/System Integration/Vehicle flashing.jpg',
   images: [
-    ElectricVehicle,
-    './images/System Integration/motorcycle-ecu.jpg',
-    './images/System Integration/motorcycle-assembly.jpg',
-    './images/System Integration/motorcycle-testing.jpg'
+   '../images/System Integration/Addembly.jpg',
+    '../images/System Integration/vehicle assembly line.jpg',
+    '../images/System Integration/vehicle integration.jpg',
+    '../images/System Integration/vehicles.jpg'
   ],
-  description: 'Integrated electrical systems for High Speed electric Motorcycles, including ECU, motor controller and battery management system, OBC, DC-DC.',
-  fullDescription: 'Led the integration of various electrical systems in high-performance electric motorcycles. The project encompassed the complete electrical architecture, from power distribution to control systems, ensuring optimal performance and reliability.',
-  tags: ['MCU', 'ECU/VCU', 'OBC', 'DC-DC', 'Battery'],
+  description: 'Integrated electrical systems for High Speed electric Motorcycles, including ECU, motor controller (MCU) and battery management system, OBC, DC-DC, and other components all connected with a sophisticated wire harness.',
+  fullDescription: 'Led the integration of various electrical systems in high-performance electric motorcycles. The project encompassed the complete electrical architecture, from power train to control systems, ensuring optimal performance and reliability.',
+  tags: ['MCU', 'ECU/VCU', 'OBC', 'DC-DC', 'BMS', 'HV-Battery', 'EBS/ABS', 'HV-LV Wire Harness', 'Cooling system','Integration', 'Testing'],
   icon: Globe,
   startDate: 'June 2024',
   duration: '12 months',
@@ -32,5 +31,6 @@ export const systemIntegration: Project = {
     'Achieved target performance metrics',
     'Reduced system complexity by 30%',
     'Improved overall system efficiency by 15%'
-  ]
+  ],
+  technologies: ['FreeRTOS-Embedded C/C++', 'BMS-VCU-OBC-DC_DC tester', 'CAN-RS485-UART-I2C-SPI'],
 };
