@@ -14,7 +14,6 @@ export interface Project {  id: number;
   scope: string;
   role: string;
   technologies: string[];
-  teamSize: number;
   responsibilities: string[];
   outcomes: string[];
   links?: string ;
