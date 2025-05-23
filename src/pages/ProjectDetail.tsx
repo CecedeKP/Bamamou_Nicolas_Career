@@ -121,6 +121,36 @@ const ProjectDetail = () => {
               </ul>
             </>
           )}
+           {project.technologies && (
+            <>
+              <h2 className="text-2xl font-bold mb-4 mt-6">Technologies Used</h2>
+              <ul className="space-y-2">
+                {project.technologies.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2">
+                    <CheckSquare className="h-5 w-5 mt-1 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+            {project.links && project.links.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold mb-4 mt-6">Project Links</h2>
+              <ul className="space-y-2">
+              <li>
+         
+                <a href={project.links} target="_blank" rel="noopener noreferrer">
+                  {project.links} 
+                </a>
+         
+              </li>
+              </ul>
+            </>
+            )}
+
+
+
         </div>
       </div>
     </div>

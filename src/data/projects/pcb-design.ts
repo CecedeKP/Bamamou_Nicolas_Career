@@ -13,11 +13,13 @@ export const pcbDesign: Project = {
   ],
   description: 'Multi-layer PCB designed for low-power IoT environmental sensors with integrated wireless communication.',
   fullDescription: 'This project involved the development of a sophisticated multi-layer PCB for IoT environmental sensors. The design focused on achieving ultra-low power consumption while maintaining reliable wireless communication capabilities. The PCB incorporated various environmental sensors and was optimized for mass production.',
-  tags: ['PCB Design', 'IoT', 'Low Power'],
+  tags: ['PCB Design', 'ECU','Low Power','KiCAD','ESP32', 'RTOS', 'I2C', 'CAN Bus', 'SPI', 'ADC', 'UART', 'BLE', 'WiFi'],
   icon: Zap,
   startDate: 'March 2023',
-  duration: '4 months',
-  scope: 'Full PCB Design and Prototyping',
+  duration: '3 months',
+  scope: 'Full PCB Design, Prototyping, and Firmware Development',
+  technologies: ['KiCAD', 'Altium Designer', 'Embedded C', 'FreeRTOS'],
+  teamSize: 4,
   role: 'Lead PCB Designer',
   responsibilities: [
     'Designed multi-layer PCB using Altium Designer',
@@ -29,5 +31,6 @@ export const pcbDesign: Project = {
     'Achieved 60% reduction in power consumption',
     'Successfully produced and tested 10 prototype units',
     'Design approved for mass production'
-  ]
-};
+  ],
+  links:'https://www.example.com/demo',
+}
