@@ -71,3 +71,93 @@ Yes it is!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+# Nicolas Bamamou's Professional Portfolio
+
+A modern, responsive portfolio website showcasing my professional experience, projects, and technical skills in electrical engineering, embedded systems, and IoT development.
+
+## 🚀 Featured Projects
+
+### 1. Advanced PCB Design for ECU/VCU
+- Multi-layer PCB design for vehicle control units
+- Low-power optimization with ESP32
+- Integrated multiple communication protocols (CAN, I2C, SPI)
+
+### 2. Battery Management System
+- Smart battery monitoring and control
+- Real-time data analysis
+- Safety-critical systems implementation
+
+### 3. ESP32 & 4G IoT Agricultural System
+- Remote environmental monitoring
+- Integration with Alibaba Cloud
+- Solar-powered IoT solution
+
+## 💻 Technologies Used
+
+### Frontend
+- React with TypeScript
+- Vite for build tooling
+- Tailwind CSS for styling
+- shadcn/ui components
+- React Router for navigation
+
+### Development Tools
+- Git for version control
+- EmailJS for contact form
+- Responsive design principles
+- Modern UI/UX practices
+
+## 🛠️ Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Bamamou/Bamamou_Nicolas_Career.git
+cd Bamamou_Nicolas_Career
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file and add your EmailJS credentials:
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+## 📱 Features
+
+- Responsive design for all devices
+- Dark/Light mode support
+- Project filtering by category
+- Interactive project galleries
+- Contact form with email integration
+- Professional project documentation
+- Detailed technical specifications
+
+## 🌐 Deployment
+
+The site is deployed using GitHub Pages. To deploy your own version:
+
+```bash
+npm run build
+npm run deploy
+```
+
+## 📬 Contact
+
+- Email: bamamounicolas@gmail.com
+- LinkedIn: [Nicolas Bamamou](https://www.linkedin.com/in/nicolas-bamamou/)
+- GitHub: [@Bamamou](https://github.com/Bamamou)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

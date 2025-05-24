@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -134,19 +135,25 @@ const ProjectDetail = () => {
               </ul>
             </>
           )}
-            {project.links && project.links.length > 0 && (
-            <>
-              <h2 className="text-2xl font-bold mb-4 mt-6">Project Links</h2>
-              <ul className="space-y-2">
-              <li>
-         
-                <a href={project.links} target="_blank" rel="noopener noreferrer">
-                  {project.links} 
-                </a>
-         
-              </li>
-              </ul>
-            </>
+            {project.links && (
+            <div className="mt-8">
+              <h3 className="text-lg font-semibold mb-4">Project Resources</h3>
+              <div className="flex flex-wrap gap-4">
+                {project.links.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm">
+                      {link.icon && <link.icon className="h-4 w-4 mr-2" />}
+                      {link.title}
+                    </Button>
+                  </a>
+                ))}
+              </div>
+            </div>
             )}
 
 

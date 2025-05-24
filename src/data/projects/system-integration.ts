@@ -6,7 +6,7 @@ export const systemIntegration: Project = {
   title: 'Electric vehicle System Integration',
   category: 'electrical',  image: './images/System Integration/Vehicle flashing.jpg',
   images: [
-   '../images/System Integration/Addembly.jpg',
+   '../images/System Integration/Assembly.jpg',
     '../images/System Integration/vehicle assembly line.jpg',
     '../images/System Integration/vehicle integration.jpg',
     '../images/System Integration/vehicles.jpg'
@@ -18,19 +18,26 @@ export const systemIntegration: Project = {
   startDate: 'June 2024',
   duration: '12 months',
   scope: 'Full System Integration',
-  role: 'Lead Systems Integration Engineer',
+  role: 'Junior Systems Integration Engineer',
   responsibilities: [
     'Designed and implemented complete electrical architecture',
-    'Integrated ECU, BMS, and motor controller systems',
-    'Developed and tested power distribution systems',
-    'Coordinated with mechanical team for packaging solutions',
-    'Conducted system validation and performance testing'
+    'Integrated ECU, BMS, DC-DC and motor controller systems',
+    'Developed and tested power train components',
+    'Managed wire harness design and implementation',
+    'Coordinated with mechanical team for system design and fitment',
+    'Conducted system validation and performance testing',
+    'Developed and implemented testing protocols for system reliability',
+    'Created comprehensive documentation for system integration',
   ],
   outcomes: [
-    'Successfully integrated all electrical systems in prototype vehicles',
+    'Successfully integrated all electrical systems in 180 vehicles',
     'Achieved target performance metrics',
-    'Reduced system complexity by 30%',
-    'Improved overall system efficiency by 15%'
+    'Reduced power train system complexity by 40%',
+    'Improved overall system efficiency by 15%',
+    'Ensured compliance with safety and performance standards',
+    'Enhanced system reliability through rigorous testing',
+    'Streamlined wire harness design in English and Mandarin Chinese for easier assembly',
+    'Facilitated cross-functional collaboration for system optimization',
   ],
-  technologies: ['FreeRTOS-Embedded C/C++', 'BMS-VCU-OBC-DC_DC tester', 'CAN-RS485-UART-I2C-SPI'],
+  technologies: ['Evoke ECU Flasher', 'Evoke Configurator', 'Evoke diagnostic App', 'NG vehicles rehabilitation on Assembly line','BMS-VCU-OBC-DC_DC tester', 'CAN-RS485-UART-I2C-SPI'],
 };
