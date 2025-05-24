@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Send, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/components/ui/use-toast';
 import emailjs from '@emailjs/browser';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { CheckCircle2 } from 'lucide-react';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -16,6 +24,11 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -26,7 +39,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      await emailjs.send(
+      if (!import.meta.env.VITE_EMAILJS_SERVICE_ID || 
+          !import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 
+          !import.meta.env.VITE_EMAILJS_PUBLIC_KEY) {
+        throw new Error('EmailJS configuration is missing');
+      }
+
+      const response = await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
@@ -35,14 +54,14 @@ const Contact = () => {
           subject: formData.subject,
           message: formData.message,
           to_email: 'bamamounicolas@gmail.com',
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        }
       );
 
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
+      if (response.status !== 200) {
+        throw new Error('Failed to send email');
+      }
+
+      setShowSuccessDialog(true); // Show the dialog instead of toast
 
       setFormData({
         name: '',
@@ -51,9 +70,10 @@ const Contact = () => {
         message: '',
       });
     } catch (error) {
+      console.error('Email error:', error);
       toast({
         title: "Error sending message",
-        description: "Please try again later or contact directly via email.",
+        description: error instanceof Error ? error.message : "Please try again later or contact directly via email.",
         variant: "destructive",
       });
     } finally {
@@ -197,6 +217,31 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* Success Dialog */}
+      <Dialog open={showSuccessDialog} onOpenChange={setShowSuccessDialog}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 mb-4">
+              <CheckCircle2 className="h-6 w-6 text-green-600" />
+            </div>
+            <DialogTitle className="text-center text-xl font-semibold">
+              Message Sent Successfully!
+            </DialogTitle>
+            <DialogDescription className="text-center">
+              <p className="mt-2">
+                Thank you for reaching out, {formData.name.split(' ')[0]}! 
+              </p>
+              <p className="mt-2">
+                I appreciate your interest and will get back to you as soon as possible.
+              </p>
+              <p className="mt-4 text-sm text-muted-foreground">
+                You can expect a response within 24-48 hours.
+              </p>
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

@@ -78,9 +78,15 @@ const Projects = () => {
                   </Button>
                 </Link>
                 {project.category === 'embedded' || project.category === 'web' ? (
-                  <Button variant="outline" size="sm">
-                    <Code className="h-4 w-4 mr-2" /> View Code
-                  </Button>
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="sm">
+                      <Code className="h-4 w-4 mr-2" /> View Code
+                    </Button>
+                  </a>
                 ) : null}
               </CardFooter>
             </Card>

@@ -1,6 +1,13 @@
 import { LucideIcon } from 'lucide-react';
 
-export interface Project {  id: number;
+export interface ProjectLink {
+  title: string;
+  url: string;
+  icon?: LucideIcon;
+}
+
+export interface Project {
+  id: number;
   title: string;
   category: 'electrical' | 'battery' | 'embedded' | 'web';
   image: string;
@@ -16,5 +23,6 @@ export interface Project {  id: number;
   technologies: string[];
   responsibilities: string[];
   outcomes: string[];
-  links?: string ;
+  links?: ProjectLink[];
+  githubUrl?: string;  // Optional GitHub repository URL
 }

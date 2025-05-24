@@ -95,7 +95,7 @@ const About = () => {
                 <a href="https://github.com/Bamamou" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="text-muted-foreground hover:text-primary transition-colors" />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <a href="https://x.com/NicolasBamamou" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                   <Twitter className="text-muted-foreground hover:text-primary transition-colors" />
                 </a>
                 <a href="https://www.youtube.com/@nicolasbamamou94" className="hover:text-accent transition-colors" aria-label="YouTube">

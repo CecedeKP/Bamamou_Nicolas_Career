@@ -1,4 +1,4 @@
-import { Zap } from 'lucide-react';
+import { Zap, FileText, FileSpreadsheet, Code } from 'lucide-react';
 import type { Project } from './types';
 
 export const pcbDesign: Project = {
@@ -39,5 +39,21 @@ export const pcbDesign: Project = {
     'Successfully produced and tested 10 prototype units',
     'Design approved for mass production'
   ],
-  links:'https://www.example.com/demo',
+  links: [
+    {
+      title: 'Documentation',
+      url: '../projects/pcb-design/documentation.html',
+      icon: FileText
+    },
+    {
+      title: 'Interactive BOM',
+      url: '../projects/pcb-design/ibom.html',
+      icon: FileSpreadsheet
+    },
+    {
+      title: 'Schematic',
+      url: '../projects/pcb-design/schematic.html',
+      icon: Code
+    }
+  ],
 }
